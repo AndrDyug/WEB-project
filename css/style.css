@@ -69,10 +69,17 @@ header > * {
   background-color: #ee6344;
   -webkit-transition: width .15s ease-out;
   transition: width .15s ease-out;
+
 }
 
 .navbar .links a:hover::after {
   width: 100%;
+}
+.navbar .links a:hover{
+  color: #ee6344;
+  border-color: #ee6344;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .logo {
@@ -82,8 +89,8 @@ header > * {
 }
 
 .logo img {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
@@ -94,6 +101,7 @@ header > * {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+
 }
 
 .contact-num p {
@@ -116,6 +124,15 @@ header > * {
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.cart-btn:hover span {
+  color: #ee6344;
+  border-color: #ee6344;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 main {
@@ -130,7 +147,7 @@ main {
 .sidebar {
   margin-top: 80px;
   height: 100%;
-  width: 120px;
+  width: 50px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   position: fixed;
 }
@@ -138,8 +155,9 @@ main {
 .content {
   position: relative;
   width: 100%;
-  margin: 80px 500px 0 110px;
+  margin-top: 80px;
 }
+
 
 .ticket-menu > :nth-child(2n) {
   background-color: rgba(0, 0, 0, 0.04);
@@ -158,6 +176,7 @@ main {
   margin: 40px 60px;
   width: 700px;
   height: 300px;
+  margin-left: 200px;
 }
 .carousel img{
   width: 100%;
@@ -166,10 +185,11 @@ main {
 
 
 .trends {
-  width: 100%;
+  width: 80%;
   margin: 80px 0;
   padding: 0 100px;
   background-color: white;
+  margin-left: 200px;
 }
 
 .trends h2 {
@@ -196,11 +216,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
   width: 100%;
+}
+.ticket-slider .ticket-list a{
+  text-decoration: none;
 }
 
 .ticket-list .ticket-item {
@@ -208,6 +234,8 @@ main {
   width: 100%;
   max-width: 280px;
   padding: 30px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,6 +252,8 @@ main {
   transition: box-shadow .3s;
   transition: box-shadow .3s, -webkit-box-shadow .3s;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
 }
 
 .ticket-list .ticket-item:hover {
@@ -233,6 +263,8 @@ main {
   transition: -webkit-box-shadow .3s;
   transition: box-shadow .3s;
   transition: box-shadow .3s, -webkit-box-shadow .3s;
+  background-color: #ff6d33; 
+  border-radius: 25px;
 }
 
 .ticket-list .ticket-item .buy-item {
@@ -240,9 +272,19 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .ticket-list .ticket-item .buy-item .price {
