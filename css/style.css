@@ -318,7 +318,6 @@ header > * {
 .item p{
   font-size: 18px;
 }
-
 .date{
   width: 10%;
   font-size: 12px;
@@ -329,5 +328,28 @@ header > * {
 }
 .choose{
   width: 150px;
+}
+/*-----------event.html--------*/
+.event{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff6d33;
+  margin-left: 7%;
+}
+.event:hover{
+  box-shadow: 0 0 20px #ff6d33;
+}
+.event .name{
+  font-weight: bold;
+  font-size: 18px;
+}
+.event .body{
+  font-size: 14px;
+}
+.list-item .event{
+
 }
 /*# sourceMappingURL=style.css.map */
