@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		  * {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  padding: 50px;
+  height: 450px;
+}
+.item1{
+  width: 25%;
+  background-color: yellow;
+}
+.item2{
+  width: 50%;
+  background-color: white;
+}
+.header{
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+  color: white;
+  float: left;
+}
+.buttons{
+	margin-left: 350px;
+	width: 47%;
+}
+.footer{
+  width: 100%;
+  height: 150px;
+  background-color: blue;
+  color: white;
+  float: left;
+}
+.four{
+  text-align: center;
+}
+.five p{
+  margin-top: 75px;
+  text-align: right;
+}
+.violet{
+	background-color: violet;
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+	<script> 
+   window.onload = function() {
+    var canvas = document.getElementById('canvas');
+    canvas.width = 600;
+    canvas.height = 350;
+    if(canvas && canvas.getContext) {
+     var context = canvas.getContext('2d');
+
+    var img = new Image();
+	img.onload = function() {
+  	context.save();
+    context.rect(0, 0, canvas.width,canvas.height);//Здесь первый 0=X
+    context.clip();
+    context.drawImage(img,0,0,canvas.width,canvas.height);//Первый 0=X
+    context.restore();
+};
+img.src = 'https://img3.goodfon.ru/wallpaper/nbig/e/d2/futbolnoe-pole-futbol-pole.jpg';
+
+    }
+   }
+  </script>
+ </head>
+<body>
+
+<div class="clearfix">
+  <div class="header">
+  	<div class="buttons">
+  		<button class="violet">1</button>
+  		<button class="violet">2</button>
+  		<button class="violet">3</button>
+  	</div>
+  </div>
+  <div class="box item1 five">
+  <p>5</p>
+  </div>
+  <div class="box item2 four">
+    <canvas id="canvas">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+  </div>
+  <div class="box item1 four"><p>2</p></div>
+  <div class="footer"><p>3</p></div>
+</div>
+</body>
+</html>
