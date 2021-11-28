@@ -290,13 +290,17 @@ header > * {
   background-color: rgba(0, 0, 0, 0.9);
   margin-bottom: 5px;
 }
-@media(max-width: 600px){
+
+@media(max-width: 1000px){
   .ticket-list{
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
 }
-@media(max-width: 960px){
-  .ticket-slider{
+@media(max-width: 800px){
+  .ticket-list{
+    display: flex;
+    flex-direction: column;
   }
 }
 /*---------------tickets.css-------------*/
