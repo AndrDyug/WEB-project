@@ -291,13 +291,13 @@ header > * {
   margin-bottom: 5px;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1200px){
   .ticket-list{
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
 }
-@media(max-width: 800px){
+@media(max-width: 1000px){
   .ticket-list{
     display: flex;
     flex-direction: column;
